@@ -1,0 +1,300 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		41AA949E166DD8D200700178 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41AA949D166DD8D200700178 /* UIKit.framework */; };
+		41AA94A0166DD8D200700178 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41AA949F166DD8D200700178 /* Foundation.framework */; };
+		41AA94A2166DD8D200700178 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41AA94A1166DD8D200700178 /* CoreGraphics.framework */; };
+		41AA94A8166DD8D200700178 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 41AA94A6166DD8D200700178 /* InfoPlist.strings */; };
+		41AA94AA166DD8D200700178 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 41AA94A9166DD8D200700178 /* main.m */; };
+		41AA94AE166DD8D200700178 /* TMSAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 41AA94AD166DD8D200700178 /* TMSAppDelegate.m */; };
+		41AA94B0166DD8D200700178 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 41AA94AF166DD8D200700178 /* Default.png */; };
+		41AA94B2166DD8D200700178 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 41AA94B1166DD8D200700178 /* Default@2x.png */; };
+		41AA94B4166DD8D200700178 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 41AA94B3166DD8D200700178 /* Default-568h@2x.png */; };
+		41AA94B7166DD8D200700178 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41AA94B5166DD8D200700178 /* MainStoryboard.storyboard */; };
+		41AA94BA166DD8D200700178 /* TMSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 41AA94B9166DD8D200700178 /* TMSViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		41AA9499166DD8D200700178 /* xplay2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = xplay2.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		41AA949D166DD8D200700178 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		41AA949F166DD8D200700178 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		41AA94A1166DD8D200700178 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		41AA94A5166DD8D200700178 /* xplay2-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "xplay2-Info.plist"; sourceTree = "<group>"; };
+		41AA94A7166DD8D200700178 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		41AA94A9166DD8D200700178 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		41AA94AB166DD8D200700178 /* xplay2-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "xplay2-Prefix.pch"; sourceTree = "<group>"; };
+		41AA94AC166DD8D200700178 /* TMSAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TMSAppDelegate.h; sourceTree = "<group>"; };
+		41AA94AD166DD8D200700178 /* TMSAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TMSAppDelegate.m; sourceTree = "<group>"; };
+		41AA94AF166DD8D200700178 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		41AA94B1166DD8D200700178 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		41AA94B3166DD8D200700178 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		41AA94B6166DD8D200700178 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		41AA94B8166DD8D200700178 /* TMSViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TMSViewController.h; sourceTree = "<group>"; };
+		41AA94B9166DD8D200700178 /* TMSViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TMSViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		41AA9496166DD8D200700178 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				41AA949E166DD8D200700178 /* UIKit.framework in Frameworks */,
+				41AA94A0166DD8D200700178 /* Foundation.framework in Frameworks */,
+				41AA94A2166DD8D200700178 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		41AA948E166DD8D200700178 = {
+			isa = PBXGroup;
+			children = (
+				41AA94A3166DD8D200700178 /* xplay2 */,
+				41AA949C166DD8D200700178 /* Frameworks */,
+				41AA949A166DD8D200700178 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		41AA949A166DD8D200700178 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				41AA9499166DD8D200700178 /* xplay2.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		41AA949C166DD8D200700178 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				41AA949D166DD8D200700178 /* UIKit.framework */,
+				41AA949F166DD8D200700178 /* Foundation.framework */,
+				41AA94A1166DD8D200700178 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		41AA94A3166DD8D200700178 /* xplay2 */ = {
+			isa = PBXGroup;
+			children = (
+				41AA94AC166DD8D200700178 /* TMSAppDelegate.h */,
+				41AA94AD166DD8D200700178 /* TMSAppDelegate.m */,
+				41AA94B5166DD8D200700178 /* MainStoryboard.storyboard */,
+				41AA94B8166DD8D200700178 /* TMSViewController.h */,
+				41AA94B9166DD8D200700178 /* TMSViewController.m */,
+				41AA94A4166DD8D200700178 /* Supporting Files */,
+			);
+			path = xplay2;
+			sourceTree = "<group>";
+		};
+		41AA94A4166DD8D200700178 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				41AA94A5166DD8D200700178 /* xplay2-Info.plist */,
+				41AA94A6166DD8D200700178 /* InfoPlist.strings */,
+				41AA94A9166DD8D200700178 /* main.m */,
+				41AA94AB166DD8D200700178 /* xplay2-Prefix.pch */,
+				41AA94AF166DD8D200700178 /* Default.png */,
+				41AA94B1166DD8D200700178 /* Default@2x.png */,
+				41AA94B3166DD8D200700178 /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		41AA9498166DD8D200700178 /* xplay2 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 41AA94BD166DD8D200700178 /* Build configuration list for PBXNativeTarget "xplay2" */;
+			buildPhases = (
+				41AA9495166DD8D200700178 /* Sources */,
+				41AA9496166DD8D200700178 /* Frameworks */,
+				41AA9497166DD8D200700178 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = xplay2;
+			productName = xplay2;
+			productReference = 41AA9499166DD8D200700178 /* xplay2.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		41AA9490166DD8D200700178 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = TMS;
+				LastUpgradeCheck = 0450;
+				ORGANIZATIONNAME = "Kevin Alcock";
+			};
+			buildConfigurationList = 41AA9493166DD8D200700178 /* Build configuration list for PBXProject "xplay2" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 41AA948E166DD8D200700178;
+			productRefGroup = 41AA949A166DD8D200700178 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				41AA9498166DD8D200700178 /* xplay2 */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		41AA9497166DD8D200700178 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				41AA94A8166DD8D200700178 /* InfoPlist.strings in Resources */,
+				41AA94B0166DD8D200700178 /* Default.png in Resources */,
+				41AA94B2166DD8D200700178 /* Default@2x.png in Resources */,
+				41AA94B4166DD8D200700178 /* Default-568h@2x.png in Resources */,
+				41AA94B7166DD8D200700178 /* MainStoryboard.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		41AA9495166DD8D200700178 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				41AA94AA166DD8D200700178 /* main.m in Sources */,
+				41AA94AE166DD8D200700178 /* TMSAppDelegate.m in Sources */,
+				41AA94BA166DD8D200700178 /* TMSViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		41AA94A6166DD8D200700178 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				41AA94A7166DD8D200700178 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		41AA94B5166DD8D200700178 /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				41AA94B6166DD8D200700178 /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		41AA94BB166DD8D200700178 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		41AA94BC166DD8D200700178 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		41AA94BE166DD8D200700178 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "xplay2/xplay2-Prefix.pch";
+				INFOPLIST_FILE = "xplay2/xplay2-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		41AA94BF166DD8D200700178 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "xplay2/xplay2-Prefix.pch";
+				INFOPLIST_FILE = "xplay2/xplay2-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		41AA9493166DD8D200700178 /* Build configuration list for PBXProject "xplay2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				41AA94BB166DD8D200700178 /* Debug */,
+				41AA94BC166DD8D200700178 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		41AA94BD166DD8D200700178 /* Build configuration list for PBXNativeTarget "xplay2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				41AA94BE166DD8D200700178 /* Debug */,
+				41AA94BF166DD8D200700178 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 41AA9490166DD8D200700178 /* Project object */;
+}
