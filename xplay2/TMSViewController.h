@@ -7,7 +7,19 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <AddressBook/AddressBook.h>
+#import <AddressBookUI/AddressBookUI.h>
+#import "AuthorizeWebViewController.h"
 
-@interface TMSViewController : UIViewController
+@interface TMSViewController : UIViewController <AuthorizeWebViewControllerDelegate>
+@property (weak, nonatomic) IBOutlet UIButton *findPersonButton;
 
+@property (weak, nonatomic) IBOutlet UIButton *orgButton;
+@property (weak, nonatomic) IBOutlet UIButton *connectToXero;
+@property (weak, nonatomic) IBOutlet UILabel *welcomeLabel;
+
+- (IBAction)findAPerson:(id)sender;
+
+- (IBAction) showOrg:(id)sender;
+- (IBAction) connectToXero:(id)sender;
 @end

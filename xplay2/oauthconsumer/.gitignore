@@ -1,0 +1,6 @@
+.DS_Store
+build
+*.xcodeproj/project.workspace
+*.xcodeproj/xcshareddata
+*.xcodeproj/xcuserdata
+*.xcodeproj/project.xcworkspace

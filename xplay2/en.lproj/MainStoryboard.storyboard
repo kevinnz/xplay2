@@ -1,23 +1,116 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2519" systemVersion="12A206j" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2844" systemVersion="11G63" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="MRZ-6C-BSa">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1856"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1930"/>
     </dependencies>
     <scenes>
-        <!--class Prefix:identifier View Controller-->
+        <!--Navigation Controller - Xero Buddy-->
+        <scene sceneID="hEy-K8-3in">
+            <objects>
+                <navigationController title="Xero Buddy" definesPresentationContext="YES" toolbarHidden="NO" id="MRZ-6C-BSa" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="j17-Rh-LE9">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="ZmR-IA-3y3">
+                        <rect key="frame" x="0.0" y="524" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
+                    <connections>
+                        <segue destination="2" kind="relationship" relationship="rootViewController" id="ubX-fU-0LG"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3UG-hE-Hm8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-533" y="43"/>
+        </scene>
+        <!--View Controller - Xero Buddy-->
         <scene sceneID="5">
             <objects>
-                <viewController id="2" customClass="TMSViewController" sceneMemberID="viewController">
+                <viewController title="Xero Buddy" id="2" customClass="TMSViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3">
-                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yJB-XN-40X">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="51" id="hS3-B9-Xkd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" size="button"/>
+                                <state key="normal" title="Org">
+                                    <color key="titleColor" red="0.19607843137254902" green="0.30980392156862746" blue="0.52156862745098043" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="showOrg:" destination="2" eventType="touchUpInside" id="adD-qA-Ely"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nhh-Lv-uRS">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" image="connect_xero_button_blue.png">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="connectToXero:" destination="2" eventType="touchUpInside" id="oKa-la-aRV"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label Welcome" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="baE-aW-Iog">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="252" id="9JV-6q-OLI"/>
+                                    <constraint firstAttribute="height" constant="32" id="aVS-PN-JeW"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <size key="shadowOffset" width="0.0" height="0.0"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uWn-fV-Llc">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Find a Person">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="findAPerson:" destination="2" eventType="touchUpInside" id="FT6-Us-0U6"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="nhh-Lv-uRS" firstAttribute="top" secondItem="3" secondAttribute="top" constant="57" id="Hwu-8c-4W9"/>
+                            <constraint firstItem="baE-aW-Iog" firstAttribute="top" secondItem="3" secondAttribute="top" constant="207" id="M6P-UB-srd"/>
+                            <constraint firstItem="yJB-XN-40X" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="53" id="OFi-Fm-5gR"/>
+                            <constraint firstItem="nhh-Lv-uRS" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="46" id="QPh-qx-1iY"/>
+                            <constraint firstItem="baE-aW-Iog" firstAttribute="leading" secondItem="yJB-XN-40X" secondAttribute="leading" type="default" id="Uqw-SR-JhI"/>
+                            <constraint firstItem="yJB-XN-40X" firstAttribute="top" secondItem="3" secondAttribute="top" constant="127" id="cFL-eE-t7d"/>
+                            <constraint firstItem="uWn-fV-Llc" firstAttribute="leading" secondItem="baE-aW-Iog" secondAttribute="leading" type="default" id="ibo-4f-O61"/>
+                            <constraint firstItem="uWn-fV-Llc" firstAttribute="top" secondItem="3" secondAttribute="top" constant="262" id="lgb-aG-HUP"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Xero Buddy" id="atV-gn-gN0"/>
+                    <connections>
+                        <outlet property="connectToXero" destination="nhh-Lv-uRS" id="aaB-4N-6m9"/>
+                        <outlet property="findPersonButton" destination="uWn-fV-Llc" id="omC-GX-csE"/>
+                        <outlet property="orgButton" destination="yJB-XN-40X" id="IiQ-D6-06C"/>
+                        <outlet property="welcomeLabel" destination="baE-aW-Iog" id="sie-Nc-9zE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
     </scenes>
+    <resources>
+        <image name="connect_xero_button_blue.png" width="148" height="39"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
