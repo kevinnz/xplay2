@@ -8,6 +8,7 @@
 #import "OAuthConsumer.h"
 #import "TMSViewController.h"
 #import "TMSPersonViewController.h"
+#import "TMSXeroContactTableViewController.h"
 
 /* old key, secret
 #define CONSUMER_KEY @"AZQCJOGK74IO6TI1MW56CQ09ILTX6G"
@@ -217,6 +218,14 @@
     
 }
 
+
+- (IBAction)showXeroContacts:(id)sender {
+    TMSXeroContactTableViewController *viewController = [[TMSXeroContactTableViewController alloc] init];
+    
+    
+    [self.navigationController pushViewController:viewController animated:YES];
+    
+}
 
 - (IBAction)findAPerson:(id)sender {
     

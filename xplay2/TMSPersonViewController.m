@@ -210,7 +210,7 @@
     NSString *payload = [self createPayload];
     
     NSLog(@"out=%@", payload);
-    NSLog(@"190=%@", [payload substringFromIndex: 190]);
+    //NSLog(@"190=%@", [payload substringFromIndex: 190]);
     NSData *rawPayload = [ NSData dataWithBytes: [ payload UTF8String ] length: [ payload length ] ];
     
     //[payload dataUsingEncoding: NSUTF8StringEncoding ];
@@ -230,6 +230,7 @@
         NSLog(@"Something went wrong: %@", anError);
     }
     
+    NSLog(@"===============");
     NSLog(@"data=%@", data);
     
     

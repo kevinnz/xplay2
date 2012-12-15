@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		41801DA9167C5B0300A63E97 /* TMSXeroContactTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 41801DA7167C5B0300A63E97 /* TMSXeroContactTableViewController.m */; };
+		41801DAA167C5B0300A63E97 /* TMSXeroContactTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41801DA8167C5B0300A63E97 /* TMSXeroContactTableViewController.xib */; };
+		41801DAE167C5C7C00A63E97 /* XeroContact.m in Sources */ = {isa = PBXBuildFile; fileRef = 41801DAD167C5C7C00A63E97 /* XeroContact.m */; };
 		4181494E167B1871009F3A51 /* Readme.md in Resources */ = {isa = PBXBuildFile; fileRef = 4181494D167B1871009F3A51 /* Readme.md */; };
 		41AA949E166DD8D200700178 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41AA949D166DD8D200700178 /* UIKit.framework */; };
 		41AA94A0166DD8D200700178 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41AA949F166DD8D200700178 /* Foundation.framework */; };
@@ -52,6 +55,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		41801DA6167C5B0300A63E97 /* TMSXeroContactTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMSXeroContactTableViewController.h; sourceTree = "<group>"; };
+		41801DA7167C5B0300A63E97 /* TMSXeroContactTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMSXeroContactTableViewController.m; sourceTree = "<group>"; };
+		41801DA8167C5B0300A63E97 /* TMSXeroContactTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TMSXeroContactTableViewController.xib; sourceTree = "<group>"; };
+		41801DAC167C5C7C00A63E97 /* XeroContact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XeroContact.h; sourceTree = "<group>"; };
+		41801DAD167C5C7C00A63E97 /* XeroContact.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XeroContact.m; sourceTree = "<group>"; };
 		4181494D167B1871009F3A51 /* Readme.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Readme.md; sourceTree = SOURCE_ROOT; };
 		41AA9499166DD8D200700178 /* xplay2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = xplay2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		41AA949D166DD8D200700178 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -141,6 +149,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		41801DAB167C5C4300A63E97 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				41801DAC167C5C7C00A63E97 /* XeroContact.h */,
+				41801DAD167C5C7C00A63E97 /* XeroContact.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		41AA948E166DD8D200700178 = {
 			isa = PBXGroup;
 			children = (
@@ -175,11 +192,15 @@
 		41AA94A3166DD8D200700178 /* xplay2 */ = {
 			isa = PBXGroup;
 			children = (
+				41801DAB167C5C4300A63E97 /* Model */,
 				41AA94EE166DE00E00700178 /* oauthconsumer */,
 				41AA94AC166DD8D200700178 /* TMSAppDelegate.h */,
 				41AA9539166DEDF700700178 /* WebView */,
 				41AA94AD166DD8D200700178 /* TMSAppDelegate.m */,
 				41AA94B5166DD8D200700178 /* MainStoryboard.storyboard */,
+				41801DA6167C5B0300A63E97 /* TMSXeroContactTableViewController.h */,
+				41801DA7167C5B0300A63E97 /* TMSXeroContactTableViewController.m */,
+				41801DA8167C5B0300A63E97 /* TMSXeroContactTableViewController.xib */,
 				41AA953F166EB34800700178 /* connect_xero_button_blue.png */,
 				41AA94B8166DD8D200700178 /* TMSViewController.h */,
 				41AA94B9166DD8D200700178 /* TMSViewController.m */,
@@ -344,6 +365,7 @@
 				41AA9540166EB34900700178 /* connect_xero_button_blue.png in Resources */,
 				41AA9553166F1F5000700178 /* TMSPersonViewController.xib in Resources */,
 				4181494E167B1871009F3A51 /* Readme.md in Resources */,
+				41801DAA167C5B0300A63E97 /* TMSXeroContactTableViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -377,6 +399,8 @@
 				41AA952D166DE00E00700178 /* OATokenManager.m in Sources */,
 				41AA953D166DEDF700700178 /* AuthorizeWebViewController.m in Sources */,
 				41AA9552166F1F5000700178 /* TMSPersonViewController.m in Sources */,
+				41801DA9167C5B0300A63E97 /* TMSXeroContactTableViewController.m in Sources */,
+				41801DAE167C5C7C00A63E97 /* XeroContact.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -411,7 +435,7 @@
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Kevin Alcock (YGGJ95VT22)";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -426,6 +450,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				ONLY_ACTIVE_ARCH = YES;
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "3EA74BFE-C116-4E21-BEF6-94828BD05BA2";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -439,7 +464,7 @@
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Kevin Alcock (YGGJ95VT22)";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
@@ -447,6 +472,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "3EA74BFE-C116-4E21-BEF6-94828BD05BA2";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};

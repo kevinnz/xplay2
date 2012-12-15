@@ -17,6 +17,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *orgButton;
 @property (weak, nonatomic) IBOutlet UIButton *connectToXero;
 @property (weak, nonatomic) IBOutlet UILabel *welcomeLabel;
+- (IBAction)showXeroContacts:(id)sender;
 
 - (IBAction)findAPerson:(id)sender;
 
