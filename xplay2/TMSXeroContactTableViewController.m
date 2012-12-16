@@ -57,7 +57,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return contactList.count;
+    return self.contactList.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -127,10 +127,10 @@
 
 - (void) getXeroContacts {
     
-    if (!contactList) {
-        contactList = [[NSMutableArray alloc] init];
+    if (!self.contactList) {
+        self.contactList = [[NSMutableArray alloc] init];
     } else {
-        [contactList removeAllObjects];
+        [self.contactList removeAllObjects];
     }
 
     

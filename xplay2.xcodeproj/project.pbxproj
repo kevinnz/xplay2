@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		41588FCE167DAEBE007D9F75 /* XeroObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 41588FCD167DAEBE007D9F75 /* XeroObject.m */; };
+		41588FD1167DB1FE007D9F75 /* XeroPhone.m in Sources */ = {isa = PBXBuildFile; fileRef = 41588FD0167DB1FE007D9F75 /* XeroPhone.m */; };
 		41801DA9167C5B0300A63E97 /* TMSXeroContactTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 41801DA7167C5B0300A63E97 /* TMSXeroContactTableViewController.m */; };
 		41801DAA167C5B0300A63E97 /* TMSXeroContactTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41801DA8167C5B0300A63E97 /* TMSXeroContactTableViewController.xib */; };
 		41801DAE167C5C7C00A63E97 /* XeroContact.m in Sources */ = {isa = PBXBuildFile; fileRef = 41801DAD167C5C7C00A63E97 /* XeroContact.m */; };
@@ -55,6 +57,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		41588FCC167DAEBE007D9F75 /* XeroObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XeroObject.h; sourceTree = "<group>"; };
+		41588FCD167DAEBE007D9F75 /* XeroObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XeroObject.m; sourceTree = "<group>"; };
+		41588FCF167DB1FE007D9F75 /* XeroPhone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XeroPhone.h; sourceTree = "<group>"; };
+		41588FD0167DB1FE007D9F75 /* XeroPhone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XeroPhone.m; sourceTree = "<group>"; };
 		41801DA6167C5B0300A63E97 /* TMSXeroContactTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMSXeroContactTableViewController.h; sourceTree = "<group>"; };
 		41801DA7167C5B0300A63E97 /* TMSXeroContactTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMSXeroContactTableViewController.m; sourceTree = "<group>"; };
 		41801DA8167C5B0300A63E97 /* TMSXeroContactTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TMSXeroContactTableViewController.xib; sourceTree = "<group>"; };
@@ -152,8 +158,12 @@
 		41801DAB167C5C4300A63E97 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				41588FCF167DB1FE007D9F75 /* XeroPhone.h */,
+				41588FD0167DB1FE007D9F75 /* XeroPhone.m */,
 				41801DAC167C5C7C00A63E97 /* XeroContact.h */,
 				41801DAD167C5C7C00A63E97 /* XeroContact.m */,
+				41588FCC167DAEBE007D9F75 /* XeroObject.h */,
+				41588FCD167DAEBE007D9F75 /* XeroObject.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -161,8 +171,6 @@
 		41AA948E166DD8D200700178 = {
 			isa = PBXGroup;
 			children = (
-				41AA954D166F191600700178 /* AddressBookUI.framework */,
-				41AA954B166F190E00700178 /* AddressBook.framework */,
 				41AA94A3166DD8D200700178 /* xplay2 */,
 				41AA949C166DD8D200700178 /* Frameworks */,
 				41AA949A166DD8D200700178 /* Products */,
@@ -180,7 +188,9 @@
 		41AA949C166DD8D200700178 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				41AA954D166F191600700178 /* AddressBookUI.framework */,
 				41AA94C2166DD94400700178 /* libxml2.dylib */,
+				41AA954B166F190E00700178 /* AddressBook.framework */,
 				41AA94C0166DD90700700178 /* Security.framework */,
 				41AA949D166DD8D200700178 /* UIKit.framework */,
 				41AA949F166DD8D200700178 /* Foundation.framework */,
@@ -401,6 +411,8 @@
 				41AA9552166F1F5000700178 /* TMSPersonViewController.m in Sources */,
 				41801DA9167C5B0300A63E97 /* TMSXeroContactTableViewController.m in Sources */,
 				41801DAE167C5C7C00A63E97 /* XeroContact.m in Sources */,
+				41588FCE167DAEBE007D9F75 /* XeroObject.m in Sources */,
+				41588FD1167DB1FE007D9F75 /* XeroPhone.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
