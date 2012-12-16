@@ -15,6 +15,9 @@
 @synthesize addresses;
 @synthesize phones;
 
+@synthesize isCustomer;
+@synthesize isSupplier;
+
 - (NSString *) createXML {
     
     NSMutableString *xml = [[NSMutableString alloc] initWithString: @"<Contact>"] ;
@@ -41,6 +44,15 @@
             [xml appendString: [phone createXML]];
         }
     }
+    
+    if (self.isCustomer) {
+        [xml appendFormat:@"<IsCustomer>%@</IsCustomer>", isCustomer];
+    }
+    
+    if (self.isSupplier) {
+        [xml appendFormat:@"<IsSupplier>%@</IsSupplier>", isSupplier];
+    }
+    
     
     [xml appendString:@"</Contact>"];
     return [xml copy];

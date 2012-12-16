@@ -18,14 +18,19 @@
     NSString *firstName;
     NSString *lastName;
     
+    NSString *isSupplier;
+    NSString *isCustomer;
+    
 }
 
 
-@property (nonatomic) NSString *contactID;
+@property (nonatomic, strong) NSString *contactID;
 @property (strong, nonatomic) NSMutableArray *addresses;
 @property (strong, nonatomic) NSMutableArray *phones;
-@property (nonatomic) NSString *name;
-@property (nonatomic) NSString *firstName;
-@property (nonatomic) NSString *lastName;
+@property (nonatomic,strong) NSString *name;
+@property (nonatomic,strong) NSString *firstName;
+@property (nonatomic, strong) NSString *lastName;
+@property (nonatomic, strong) NSString *isSupplier;
+@property (nonatomic, strong) NSString *isCustomer;
 
 @end

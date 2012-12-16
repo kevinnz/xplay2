@@ -18,11 +18,13 @@
     OAToken *accessToken;
 }
 
+@property ( nonatomic) OAConsumer *consumer;
+@property ( nonatomic) OAToken *accessToken;
+
 @property (weak, nonatomic) IBOutlet UILabel *firstName;
 @property (weak, nonatomic) IBOutlet UILabel *phoneNumber;
 
-@property ( nonatomic) OAConsumer *consumer;
-@property ( nonatomic) OAToken *accessToken;
+
 @property (weak, nonatomic) IBOutlet UIButton *sendButton;
 
 @property (weak, nonatomic) IBOutlet UILabel *OrgLabel;

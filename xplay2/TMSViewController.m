@@ -222,7 +222,8 @@
 - (IBAction)showXeroContacts:(id)sender {
     TMSXeroContactTableViewController *viewController = [[TMSXeroContactTableViewController alloc] init];
     
-    
+    viewController.accessToken = accessToken;
+    viewController.consumer = consumer;
     [self.navigationController pushViewController:viewController animated:YES];
     
 }

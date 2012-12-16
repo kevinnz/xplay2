@@ -8,6 +8,8 @@
 
 #import "TMSXeroContactTableViewController.h"
 
+
+
 @interface TMSXeroContactTableViewController ()
 
 @end
@@ -17,6 +19,11 @@
 @implementation TMSXeroContactTableViewController
 
 @synthesize contactList;
+@synthesize consumer;
+@synthesize accessToken;
+@synthesize xeroParser;
+@synthesize contact;
+
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -38,6 +45,14 @@
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 
     [self getXeroContacts];
+    //[self.tableView reloadData];
+    
+    UIRefreshControl *refreshControl = [[UIRefreshControl alloc]
+                                        init];
+    //refreshControl.tintColor = [UIColormagentaColor];
+    [refreshControl addTarget: self action:@selector(changeSorting) forControlEvents:UIControlEventValueChanged];
+    self.refreshControl = refreshControl;
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -51,13 +66,13 @@
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return self.contactList.count;
+    return xeroParser.contactList.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -69,6 +84,10 @@
     }
     
     // Configure the cell...
+    
+    contact = [xeroParser.contactList objectAtIndex: indexPath.row];
+    cell.textLabel.text = contact.name;
+    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     
     return cell;
 }
@@ -133,6 +152,80 @@
         [self.contactList removeAllObjects];
     }
 
+    
+    if (!accessToken) {
+        NSLog(@"accessToken is nil");
+        return;
+    }
+    
+    if (xeroParser) {
+        xeroParser = nil;
+    }
+        
+    NSURL *url = [NSURL URLWithString:@"https://api.xero.com/api.xro/2.0/Contacts"];
+    OAMutableURLRequest *orequest = [[OAMutableURLRequest alloc] initWithURL:url
+                                                                        consumer:consumer
+                                                                           token:accessToken
+                                                                           realm:nil
+                                                               signatureProvider:nil];
+        
+        
+    [orequest setParameters:@[]];
+        
+    [orequest setHTTPMethod:@"GET"];
+        
+    [orequest prepare];
+        
+    OADataFetcher *fetcher = [[OADataFetcher alloc] init];
+    [fetcher fetchDataWithRequest:orequest
+                         delegate:self
+                didFinishSelector:@selector(apiContact:didFinishWithData:)
+                  didFailSelector:@selector(apiContact:didFailWithError:)];
+
+    
+}
+
+
+- (void)apiContact:(OAServiceTicket *)ticket didFinishWithData:(NSData *)data {
+    if (ticket.didSucceed) {
+        NSLog(@"apiContact Sucess");
+        
+        NSString *responseBody = [[NSString alloc] initWithData:data
+                                                       encoding:NSUTF8StringEncoding];
+        
+        NSLog(@"%@", responseBody);
+        
+        NSXMLParser *xmlParser = [[NSXMLParser alloc] initWithData:data];
+        
+        if (!xeroParser) {
+        
+            xeroParser = [[XeroParser alloc] initParser: self];
+            [xmlParser setDelegate:xeroParser];
+        }
+        
+        
+        
+        
+        [xmlParser parse];
+        
+        NSLog(@"Contact count = %d", [xeroParser.contactList count]);
+        [self.tableView reloadData];
+        
+        [self.refreshControl endRefreshing];
+        
+    }
+}
+
+- (void)apiContact:(OAServiceTicket *)ticket didFailWithError:(NSError *)error {
+    NSLog(@"%@", error);
+}
+
+
+- (void) changeSorting {
+    
+    [self getXeroContacts];
+    
+    
     
 }
 

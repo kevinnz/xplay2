@@ -7,14 +7,26 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "OAuthConsumer.h"
+#import "XeroParser.h"
+#import "XeroContact.h"
 
 @interface TMSXeroContactTableViewController : UITableViewController
 
 {
     NSMutableArray *contactList;
-    
+    OAConsumer *consumer;
+    OAToken *accessToken;
+    XeroParser *xeroParser;
+    XeroContact *contact;
 }
+    
+@property ( nonatomic) OAConsumer *consumer;
+@property ( nonatomic) OAToken *accessToken;
 
-@property (nonatomic) NSMutableArray *contactList;
+@property (nonatomic, strong) NSMutableArray *contactList;
+@property (nonatomic, strong) XeroParser *xeroParser;
+@property (nonatomic, strong) XeroContact *contact;
+
 
 @end

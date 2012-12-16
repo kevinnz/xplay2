@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		41588FCE167DAEBE007D9F75 /* XeroObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 41588FCD167DAEBE007D9F75 /* XeroObject.m */; };
 		41588FD1167DB1FE007D9F75 /* XeroPhone.m in Sources */ = {isa = PBXBuildFile; fileRef = 41588FD0167DB1FE007D9F75 /* XeroPhone.m */; };
+		41588FD4167DC535007D9F75 /* XeroParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 41588FD3167DC535007D9F75 /* XeroParser.m */; };
 		41801DA9167C5B0300A63E97 /* TMSXeroContactTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 41801DA7167C5B0300A63E97 /* TMSXeroContactTableViewController.m */; };
 		41801DAA167C5B0300A63E97 /* TMSXeroContactTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41801DA8167C5B0300A63E97 /* TMSXeroContactTableViewController.xib */; };
 		41801DAE167C5C7C00A63E97 /* XeroContact.m in Sources */ = {isa = PBXBuildFile; fileRef = 41801DAD167C5C7C00A63E97 /* XeroContact.m */; };
@@ -61,6 +62,8 @@
 		41588FCD167DAEBE007D9F75 /* XeroObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XeroObject.m; sourceTree = "<group>"; };
 		41588FCF167DB1FE007D9F75 /* XeroPhone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XeroPhone.h; sourceTree = "<group>"; };
 		41588FD0167DB1FE007D9F75 /* XeroPhone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XeroPhone.m; sourceTree = "<group>"; };
+		41588FD2167DC535007D9F75 /* XeroParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XeroParser.h; sourceTree = "<group>"; };
+		41588FD3167DC535007D9F75 /* XeroParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XeroParser.m; sourceTree = "<group>"; };
 		41801DA6167C5B0300A63E97 /* TMSXeroContactTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMSXeroContactTableViewController.h; sourceTree = "<group>"; };
 		41801DA7167C5B0300A63E97 /* TMSXeroContactTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMSXeroContactTableViewController.m; sourceTree = "<group>"; };
 		41801DA8167C5B0300A63E97 /* TMSXeroContactTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TMSXeroContactTableViewController.xib; sourceTree = "<group>"; };
@@ -210,6 +213,8 @@
 				41AA94B5166DD8D200700178 /* MainStoryboard.storyboard */,
 				41801DA6167C5B0300A63E97 /* TMSXeroContactTableViewController.h */,
 				41801DA7167C5B0300A63E97 /* TMSXeroContactTableViewController.m */,
+				41588FD2167DC535007D9F75 /* XeroParser.h */,
+				41588FD3167DC535007D9F75 /* XeroParser.m */,
 				41801DA8167C5B0300A63E97 /* TMSXeroContactTableViewController.xib */,
 				41AA953F166EB34800700178 /* connect_xero_button_blue.png */,
 				41AA94B8166DD8D200700178 /* TMSViewController.h */,
@@ -413,6 +418,7 @@
 				41801DAE167C5C7C00A63E97 /* XeroContact.m in Sources */,
 				41588FCE167DAEBE007D9F75 /* XeroObject.m in Sources */,
 				41588FD1167DB1FE007D9F75 /* XeroPhone.m in Sources */,
+				41588FD4167DC535007D9F75 /* XeroParser.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
