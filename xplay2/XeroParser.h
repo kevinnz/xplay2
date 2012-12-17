@@ -7,6 +7,7 @@
 //
 
 #import "XeroObject.h"
+#import "XeroResponse.h"
 #import "XeroContact.h"
 #import "XeroPhone.h"
 #import "XeroAddress.h"
@@ -22,12 +23,13 @@
     XeroContact *contact;
     XeroPhone *phone;
     XeroAddress *address;
+    XeroResponse *repsonse;
     
     XeroObject *currentObject;
     
 }
 
-@property (nonatomic) NSMutableArray *contactList;
+@property (nonatomic) XeroResponse *response;
 
 - (id) initParser: (id) delegate;
 

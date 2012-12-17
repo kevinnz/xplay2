@@ -72,7 +72,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return xeroParser.contactList.count;
+    return xeroParser.response.contactList.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -85,7 +85,7 @@
     
     // Configure the cell...
     
-    contact = [xeroParser.contactList objectAtIndex: indexPath.row];
+    contact = [xeroParser.response.contactList objectAtIndex: indexPath.row];
     cell.textLabel.text = contact.name;
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     
@@ -168,9 +168,11 @@
                                                                            token:accessToken
                                                                            realm:nil
                                                                signatureProvider:nil];
+    
+    OARequestParameter *nameParam = [[OARequestParameter alloc] initWithName:@"order"
+                                                                       value:@"Name"];
         
-        
-    [orequest setParameters:@[]];
+    [orequest setParameters: @[nameParam]];
         
     [orequest setHTTPMethod:@"GET"];
         
@@ -208,7 +210,7 @@
         
         [xmlParser parse];
         
-        NSLog(@"Contact count = %d", [xeroParser.contactList count]);
+        NSLog(@"Contact count = %d", [xeroParser.response.contactList count]);
         [self.tableView reloadData];
         
         [self.refreshControl endRefreshing];

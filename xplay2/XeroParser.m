@@ -12,7 +12,7 @@
 
 @implementation XeroParser
 
-@synthesize contactList;
+@synthesize response;
 
 - (id) initParser: (id) delegate {
     self = [self init];
@@ -40,8 +40,11 @@
         address = [[XeroAddress alloc] init];
         currentObject = address;
         
+    } else if ([elementName isEqualToString: @"Response"]) {
+        response = [[XeroResponse alloc] init];
+        currentObject = response;
+        
     }
-    
     
 }
 
@@ -58,7 +61,7 @@
 - (void) parser:(NSXMLParser *)parser didEndElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName {
     
     if ([elementName isEqualToString:@"Contact"]) {
-        [contactList addObject:contact];
+        [response.contactList addObject:contact];
         contact = nil;
         
     } else if ([elementName isEqualToString:@"Phone"]) {
@@ -70,6 +73,9 @@
         [contact.addresses addObject:address];
         address = nil;
         currentObject = contact;
+    } else if ([elementName isEqualToString:@"Response"]) {
+        // end of all xml
+        NSLog(@"end of xml [%@]", response.theId);
     
     } else if ([elementName isEqualToString:@"Addresses"]) {
         // end of group tag
@@ -77,12 +83,10 @@
         // end of group tag
     } else if ([elementName isEqualToString:@"Contacts"]) {
         // end of group tag
-    } else if ([elementName isEqualToString:@"Response"]) {
-        // end of group tag
-    }
+    } else if ([elementName isEqualToString:@"Id"]) {
+        [currentObject setValue: [currentElementValue stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]] forKey:@"theId"];
 
-
-    else {
+    } else {
         @try {
             
             
