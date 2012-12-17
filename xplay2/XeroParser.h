@@ -11,6 +11,7 @@
 #import "XeroContact.h"
 #import "XeroPhone.h"
 #import "XeroAddress.h"
+#import "XeroOrganisation.h"
 
 
   
@@ -23,7 +24,10 @@
     XeroContact *contact;
     XeroPhone *phone;
     XeroAddress *address;
-    XeroResponse *repsonse;
+    
+    XeroOrganisation *organisation;
+    
+    XeroResponse *response;
     
     XeroObject *currentObject;
     

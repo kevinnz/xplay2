@@ -10,13 +10,21 @@
 #import <AddressBook/AddressBook.h>
 #import <AddressBookUI/AddressBookUI.h>
 #import "AuthorizeWebViewController.h"
+#import "XeroParser.h"
 
-@interface TMSViewController : UIViewController <AuthorizeWebViewControllerDelegate>
+
+@interface TMSViewController : UIViewController <AuthorizeWebViewControllerDelegate> {
+    XeroParser *xeroParser;
+}
+
 @property (weak, nonatomic) IBOutlet UIButton *findPersonButton;
 
 @property (weak, nonatomic) IBOutlet UIButton *orgButton;
 @property (weak, nonatomic) IBOutlet UIButton *connectToXero;
 @property (weak, nonatomic) IBOutlet UILabel *welcomeLabel;
+
+@property (nonatomic, strong) XeroParser *xeroParser;
+
 - (IBAction)showXeroContacts:(id)sender;
 
 - (IBAction)findAPerson:(id)sender;

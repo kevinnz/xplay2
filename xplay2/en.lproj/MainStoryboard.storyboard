@@ -48,6 +48,9 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nhh-Lv-uRS">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="KOS-z1-nQA"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" image="connect_xero_button_blue.png">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -97,18 +100,19 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="E3e-vp-JBr" firstAttribute="leading" secondItem="uWn-fV-Llc" secondAttribute="leading" type="default" id="7Aj-vn-8Sr"/>
+                            <constraint firstItem="yJB-XN-40X" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="An0-4N-lOu"/>
+                            <constraint firstItem="uWn-fV-Llc" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="FXX-is-oR3"/>
                             <constraint firstItem="nhh-Lv-uRS" firstAttribute="top" secondItem="3" secondAttribute="top" constant="57" id="Hwu-8c-4W9"/>
-                            <constraint firstItem="baE-aW-Iog" firstAttribute="top" secondItem="3" secondAttribute="top" constant="207" id="M6P-UB-srd"/>
-                            <constraint firstItem="yJB-XN-40X" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="53" id="OFi-Fm-5gR"/>
-                            <constraint firstItem="nhh-Lv-uRS" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="46" id="QPh-qx-1iY"/>
-                            <constraint firstItem="baE-aW-Iog" firstAttribute="leading" secondItem="yJB-XN-40X" secondAttribute="leading" type="default" id="Uqw-SR-JhI"/>
-                            <constraint firstItem="yJB-XN-40X" firstAttribute="top" secondItem="3" secondAttribute="top" constant="127" id="cFL-eE-t7d"/>
-                            <constraint firstItem="uWn-fV-Llc" firstAttribute="leading" secondItem="baE-aW-Iog" secondAttribute="leading" type="default" id="ibo-4f-O61"/>
+                            <constraint firstItem="nhh-Lv-uRS" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="OvG-3F-9Wo"/>
+                            <constraint firstItem="E3e-vp-JBr" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="QUI-rb-zdf"/>
+                            <constraint firstItem="baE-aW-Iog" firstAttribute="top" secondItem="yJB-XN-40X" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="Sng-Mf-I58"/>
+                            <constraint firstItem="yJB-XN-40X" firstAttribute="top" secondItem="3" secondAttribute="top" constant="156" id="iyp-TD-G5g"/>
                             <constraint firstItem="uWn-fV-Llc" firstAttribute="top" secondItem="3" secondAttribute="top" constant="262" id="lgb-aG-HUP"/>
+                            <constraint firstItem="baE-aW-Iog" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="mj7-6N-Dv3"/>
                             <constraint firstAttribute="bottom" secondItem="E3e-vp-JBr" secondAttribute="bottom" constant="90" id="qXu-AK-qSE"/>
+                            <constraint firstAttribute="trailing" secondItem="nhh-Lv-uRS" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="uD2-iF-fAE"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Xero Buddy" id="atV-gn-gN0"/>
@@ -127,6 +131,24 @@
     <resources>
         <image name="connect_xero_button_blue.png" width="148" height="39"/>
     </resources>
+    <classes>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="TMSViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/TMSViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="connectToXero:"/>
+                <relationship kind="action" name="findAPerson:"/>
+                <relationship kind="action" name="showOrg:"/>
+                <relationship kind="action" name="showXeroContacts:"/>
+                <relationship kind="outlet" name="connectToXero" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="findPersonButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="orgButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="welcomeLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

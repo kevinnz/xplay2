@@ -19,7 +19,8 @@
     
     if (self) {
         parserDelegate = delegate;
-        contactList = [[NSMutableArray alloc] init];
+        //contactList = [[NSMutableArray alloc] init];
+        
     }
     
     return self;
@@ -39,6 +40,9 @@
     } else if ([elementName isEqualToString: @"Address"]) {
         address = [[XeroAddress alloc] init];
         currentObject = address;
+    } else if ([elementName isEqualToString: @"Organisation"]) {
+        organisation = [[XeroOrganisation alloc] init];
+        currentObject = organisation;
         
     } else if ([elementName isEqualToString: @"Response"]) {
         response = [[XeroResponse alloc] init];
@@ -63,6 +67,7 @@
     if ([elementName isEqualToString:@"Contact"]) {
         [response.contactList addObject:contact];
         contact = nil;
+        //currentObject = response;
         
     } else if ([elementName isEqualToString:@"Phone"]) {
         [contact.phones addObject:phone];
@@ -72,7 +77,12 @@
     } else if ([elementName isEqualToString:@"Address"]) {
         [contact.addresses addObject:address];
         address = nil;
+
         currentObject = contact;
+    } else if ([elementName isEqualToString:@"Organisation"]) {
+        [response.organisationList addObject:organisation];
+        organisation = nil;
+        //currentObject = response;
     } else if ([elementName isEqualToString:@"Response"]) {
         // end of all xml
         NSLog(@"end of xml [%@]", response.theId);
@@ -82,6 +92,8 @@
     } else if ([elementName isEqualToString:@"Phones"]) {
         // end of group tag
     } else if ([elementName isEqualToString:@"Contacts"]) {
+        // end of group tag
+    } else if ([elementName isEqualToString:@"Organisations"]) {
         // end of group tag
     } else if ([elementName isEqualToString:@"Id"]) {
         [currentObject setValue: [currentElementValue stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]] forKey:@"theId"];

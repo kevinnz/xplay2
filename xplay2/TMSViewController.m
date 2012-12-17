@@ -30,6 +30,7 @@
 
 @implementation TMSViewController
 @synthesize welcomeLabel;
+@synthesize xeroParser;
 
 - (void)viewDidLoad
 {
@@ -247,6 +248,10 @@
         return;
     }
     
+    if (xeroParser) {
+        xeroParser = nil;
+    }
+    
     
     NSURL *url = [NSURL URLWithString:@"https://api.xero.com/api.xro/2.0/Organisation"];
     OAMutableURLRequest *orequest = [[OAMutableURLRequest alloc] initWithURL:url
@@ -287,6 +292,8 @@
         
         NSLog(@"%@", responseBody);
        
+        /*
+        
         NSXMLParser *parser = [[NSXMLParser alloc] initWithData: [responseBody dataUsingEncoding: [NSString defaultCStringEncoding] ]];
         
         [parser setDelegate: (id)self];
@@ -300,53 +307,30 @@
  
             NSLog(@"parserError = %@", parseError);
         }
+         
+     */
+        NSXMLParser *xmlParser = [[NSXMLParser alloc] initWithData:data];
+        
+        if (!xeroParser) {
+            
+            xeroParser = [[XeroParser alloc] initParser: self];
+            [xmlParser setDelegate:xeroParser];
+        }
+        
+        [xmlParser parse];
+        
+        NSLog(@"Organisation count = %d", [xeroParser.response.organisationList count]);
+        
+        if (xeroParser.response.organisationList) {
+            XeroOrganisation *org = xeroParser.response.organisationList[0];
+            welcomeLabel.text = org.name;
+        }
+        
     }
 }
 
 - (void)apiOrg:(OAServiceTicket *)ticket didFailWithError:(NSError *)error {
     NSLog(@"%@", error);
-}
-
-//
-// the XML parser calls here with all the elements for the level
-//
--(void)parser:(NSXMLParser *)parser didStartElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName attributes:(NSDictionary *)attributeDict {
-	if(qName) {
-		elementName = qName;
-	}
-    /*
-	if([elementName isEqualToString:@"Name"]) {
-		NSString *companyName = 
-        welcomeLabel.text = companyName;
-	}
-     */
-	
-}
-
-- (void)parser:(NSXMLParser *)parser foundCharacters:(NSString *)string {
-    if (!currentStringValue) {
-        // currentStringValue is an NSMutableString instance variable
-        currentStringValue = [[NSMutableString alloc] initWithCapacity:50];
-    }
-    [currentStringValue appendString:string];
-}
-
-- (void)parser:(NSXMLParser *)parser didEndElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName {
-    
-    if([elementName isEqualToString:@"Name"]) {
-		
-        welcomeLabel.text = currentStringValue;
-	}
-    
-    currentStringValue = nil;
-    
-}
-
-//
-// the level did not load, file not found, etc.
-//
--(void)parser:(NSXMLParser *)parser parseErrorOccurred:(NSError *)parseError{
-	////NSLog(@"Error on XML Parse: %@", [parseError localizedDescription] );
 }
 
 
