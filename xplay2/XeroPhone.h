@@ -11,17 +11,17 @@
 @interface XeroPhone : XeroObject
 
 {
-    NSString *type;
-    NSString *number;
-    NSString *areaCode;
-    NSString *countryCode;
+    NSString *phoneType;
+    NSString *phoneNumber;
+    NSString *phoneAreaCode;
+    NSString *phoneCountryCode;
     
 }
 
-@property (nonatomic) NSString *type;
-@property (nonatomic) NSString *number;
-@property (nonatomic) NSString *areaCode;
-@property (nonatomic) NSString *countryCode;
+@property (nonatomic) NSString *phoneType;
+@property (nonatomic) NSString *phoneNumber;
+@property (nonatomic) NSString *phoneAreaCode;
+@property (nonatomic) NSString *phoneCountryCode;
 
 
 

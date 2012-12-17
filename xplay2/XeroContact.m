@@ -17,6 +17,15 @@
 
 @synthesize isCustomer;
 @synthesize isSupplier;
+@synthesize updatedDateUTC;
+@synthesize contactStatus;
+@synthesize defaultCurrency;
+@synthesize bankAccountDetails;
+@synthesize taxNumber;
+@synthesize emailAddress;
+@synthesize skypeUserName;
+@synthesize accountsReceivableTaxType;
+@synthesize accountsPayableTaxType;
 
 - (NSString *) createXML {
     

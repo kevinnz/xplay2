@@ -10,25 +10,25 @@
 
 @implementation XeroPhone
 
-@synthesize type, number, areaCode, countryCode;
+@synthesize phoneType, phoneNumber, phoneAreaCode, phoneCountryCode;
 
 -(NSString *) createXML {
     NSMutableString *xml = [[NSMutableString alloc] initWithString: @"<Phone>"] ;
     
-    if (self.type) {
-        [xml appendFormat:@"<PhoneType>%@</PhoneType>", type];
+    if (self.phoneType) {
+        [xml appendFormat:@"<PhoneType>%@</PhoneType>", phoneType];
     }
     
-    if (self.number) {
-        [xml appendFormat:@"<PhoneNumber>%@</PhoneNumber>", number];
+    if (self.phoneNumber) {
+        [xml appendFormat:@"<PhoneNumber>%@</PhoneNumber>", phoneNumber];
     }
     
-    if (self.areaCode) {
-        [xml appendFormat:@"<PhoneAreaCode>%@</PhoneAreaCode>", areaCode];
+    if (self.phoneAreaCode) {
+        [xml appendFormat:@"<PhoneAreaCode>%@</PhoneAreaCode>", phoneAreaCode];
     }
     
-    if (self.countryCode) {
-        [xml appendFormat:@"<PhoneCountryCode>%@</PhoneCountryCode>", countryCode];
+    if (self.phoneCountryCode) {
+        [xml appendFormat:@"<PhoneCountryCode>%@</PhoneCountryCode>", phoneCountryCode];
     }
     
     [xml appendString:@"</Phone>"];

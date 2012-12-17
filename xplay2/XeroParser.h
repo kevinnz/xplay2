@@ -8,6 +8,8 @@
 
 #import "XeroObject.h"
 #import "XeroContact.h"
+#import "XeroPhone.h"
+#import "XeroAddress.h"
 
 
   
@@ -18,6 +20,10 @@
     NSMutableArray *contactList;
     NSMutableString *currentElementValue;
     XeroContact *contact;
+    XeroPhone *phone;
+    XeroAddress *address;
+    
+    XeroObject *currentObject;
     
 }
 

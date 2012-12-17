@@ -20,7 +20,15 @@
     
     NSString *isSupplier;
     NSString *isCustomer;
-    
+    NSString *updatedDateUTC;
+    NSString *contactStatus;
+    NSString *defaultCurrency;
+    NSString *bankAccountDetails;
+    NSString *taxNumber;
+    NSString *emailAddress;
+    NSString *skypeUserName;
+    NSString *accountsReceivableTaxType;
+    NSString *accountsPayableTaxType;
 }
 
 
@@ -32,5 +40,15 @@
 @property (nonatomic, strong) NSString *lastName;
 @property (nonatomic, strong) NSString *isSupplier;
 @property (nonatomic, strong) NSString *isCustomer;
+@property (nonatomic, strong) NSString *updatedDateUTC;
+@property (nonatomic, strong) NSString *contactStatus;
+@property (nonatomic, strong) NSString *defaultCurrency;
+@property (nonatomic, strong) NSString *bankAccountDetails;
+@property (nonatomic, strong) NSString *taxNumber;
+@property (nonatomic, strong) NSString *emailAddress;
+@property (nonatomic, strong) NSString *skypeUserName;
+@property (nonatomic, strong) NSString *accountsReceivableTaxType;
+@property (nonatomic, strong) NSString *accountsPayableTaxType;
+
 
 @end

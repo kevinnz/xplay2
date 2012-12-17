@@ -30,8 +30,18 @@
     
     if ([elementName isEqualToString: @"Contact"]) {
         contact = [[XeroContact alloc] init];
+        currentObject = contact;
+        
+    } else if ([elementName isEqualToString: @"Phone"]) {
+        phone = [[XeroPhone alloc] init];
+        currentObject = phone;
+        
+    } else if ([elementName isEqualToString: @"Address"]) {
+        address = [[XeroAddress alloc] init];
+        currentObject = address;
         
     }
+    
     
 }
 
@@ -51,15 +61,32 @@
         [contactList addObject:contact];
         contact = nil;
         
-    } else if ([elementName isEqualToString:@"Phones"]) {
+    } else if ([elementName isEqualToString:@"Phone"]) {
+        [contact.phones addObject:phone];
+        phone = nil;
+        currentObject = contact;
         
-    } else if ([elementName isEqualToString:@"Addresses"]) {
+    } else if ([elementName isEqualToString:@"Address"]) {
+        [contact.addresses addObject:address];
+        address = nil;
+        currentObject = contact;
     
+    } else if ([elementName isEqualToString:@"Addresses"]) {
+        // end of group tag
+    } else if ([elementName isEqualToString:@"Phones"]) {
+        // end of group tag
+    } else if ([elementName isEqualToString:@"Contacts"]) {
+        // end of group tag
+    } else if ([elementName isEqualToString:@"Response"]) {
+        // end of group tag
     }
+
 
     else {
         @try {
-            [contact setValue: [currentElementValue stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]] forKey:elementName];
+            
+            
+            [currentObject setValue: [currentElementValue stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]] forKey:elementName];
         }
         @catch (NSException *exception) {
             NSLog(@"no property for %@", elementName);
