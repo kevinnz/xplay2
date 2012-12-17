@@ -35,4 +35,35 @@
     return [xml copy];
 }
 
+
+
+- (NSString *) getFullNumber {
+    NSMutableString *fullNumber = [[NSMutableString alloc] init];
+    
+    if (phoneCountryCode) {
+        [fullNumber appendString:phoneCountryCode];
+        
+    }
+    
+    if (phoneAreaCode) {
+
+        if (fullNumber.length > 0) {
+            [fullNumber appendString:@" "];
+            
+        }
+        [fullNumber appendString:phoneAreaCode ];
+    }
+    
+    if (phoneNumber) {
+        
+        if (fullNumber.length > 0) {
+            [fullNumber appendString:@" "];
+            
+        }
+        [fullNumber appendString:phoneNumber ];
+    }
+    
+    return [fullNumber copy];
+}
+
 @end

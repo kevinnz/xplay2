@@ -7,6 +7,7 @@
 //
 
 #import "TMSXeroContactTableViewController.h"
+#import "TMSXeroContactViewController.h"
 
 
 
@@ -87,6 +88,7 @@
     
     contact = [xeroParser.response.contactList objectAtIndex: indexPath.row];
     cell.textLabel.text = contact.name;
+    
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     
     return cell;
@@ -142,6 +144,12 @@
      // Pass the selected object to the new view controller.
      [self.navigationController pushViewController:detailViewController animated:YES];
      */
+    
+    TMSXeroContactViewController *viewController = [[TMSXeroContactViewController alloc] init];
+    XeroContact *selectedContact = [xeroParser.response.contactList objectAtIndex: indexPath.row];
+   
+    viewController.contact = selectedContact;
+    [self.navigationController pushViewController:viewController animated:YES];
 }
 
 - (void) getXeroContacts {

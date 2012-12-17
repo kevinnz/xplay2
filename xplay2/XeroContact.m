@@ -27,6 +27,16 @@
 @synthesize accountsReceivableTaxType;
 @synthesize accountsPayableTaxType;
 
+- (id) init {
+    self = [super init];
+    if (self) {
+        addresses = [[NSMutableArray alloc] init];
+        phones = [[NSMutableArray alloc] init];
+    }
+    
+    return self;
+}
+
 - (NSString *) createXML {
     
     NSMutableString *xml = [[NSMutableString alloc] initWithString: @"<Contact>"] ;
@@ -67,6 +77,17 @@
     return [xml copy];
     
     
+}
+
+- (NSString *) getDefaultPhone {
+    
+    for (XeroPhone* phone in phones) {
+        if ([phone.phoneType isEqualToString:@"DEFAULT"]) {
+            return [phone getFullNumber];
+        }
+    }
+    
+    return nil;
 }
 
 @end

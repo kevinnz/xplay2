@@ -24,7 +24,7 @@
 @property (nonatomic) NSString *phoneCountryCode;
 
 
-
+- (NSString *) getFullNumber;
 
 
 @end

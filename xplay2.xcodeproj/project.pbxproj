@@ -13,6 +13,8 @@
 		41588FD7167EE5A5007D9F75 /* XeroOrganisation.m in Sources */ = {isa = PBXBuildFile; fileRef = 41588FD6167EE5A5007D9F75 /* XeroOrganisation.m */; };
 		41588FDA167EEAA5007D9F75 /* XeroAddress.m in Sources */ = {isa = PBXBuildFile; fileRef = 41588FD9167EEAA5007D9F75 /* XeroAddress.m */; };
 		41588FDD167EF282007D9F75 /* XeroResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 41588FDC167EF282007D9F75 /* XeroResponse.m */; };
+		41588FE1167F017B007D9F75 /* TMSXeroContactViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 41588FDF167F017A007D9F75 /* TMSXeroContactViewController.m */; };
+		41588FE2167F017B007D9F75 /* TMSXeroContactViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41588FE0167F017B007D9F75 /* TMSXeroContactViewController.xib */; };
 		41801DA9167C5B0300A63E97 /* TMSXeroContactTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 41801DA7167C5B0300A63E97 /* TMSXeroContactTableViewController.m */; };
 		41801DAA167C5B0300A63E97 /* TMSXeroContactTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41801DA8167C5B0300A63E97 /* TMSXeroContactTableViewController.xib */; };
 		41801DAE167C5C7C00A63E97 /* XeroContact.m in Sources */ = {isa = PBXBuildFile; fileRef = 41801DAD167C5C7C00A63E97 /* XeroContact.m */; };
@@ -73,6 +75,9 @@
 		41588FD9167EEAA5007D9F75 /* XeroAddress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XeroAddress.m; sourceTree = "<group>"; };
 		41588FDB167EF282007D9F75 /* XeroResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XeroResponse.h; sourceTree = "<group>"; };
 		41588FDC167EF282007D9F75 /* XeroResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XeroResponse.m; sourceTree = "<group>"; };
+		41588FDE167F017A007D9F75 /* TMSXeroContactViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMSXeroContactViewController.h; sourceTree = "<group>"; };
+		41588FDF167F017A007D9F75 /* TMSXeroContactViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMSXeroContactViewController.m; sourceTree = "<group>"; };
+		41588FE0167F017B007D9F75 /* TMSXeroContactViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TMSXeroContactViewController.xib; sourceTree = "<group>"; };
 		41801DA6167C5B0300A63E97 /* TMSXeroContactTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMSXeroContactTableViewController.h; sourceTree = "<group>"; };
 		41801DA7167C5B0300A63E97 /* TMSXeroContactTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMSXeroContactTableViewController.m; sourceTree = "<group>"; };
 		41801DA8167C5B0300A63E97 /* TMSXeroContactTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TMSXeroContactTableViewController.xib; sourceTree = "<group>"; };
@@ -229,6 +234,9 @@
 				41801DA6167C5B0300A63E97 /* TMSXeroContactTableViewController.h */,
 				41801DA7167C5B0300A63E97 /* TMSXeroContactTableViewController.m */,
 				41801DA8167C5B0300A63E97 /* TMSXeroContactTableViewController.xib */,
+				41588FDE167F017A007D9F75 /* TMSXeroContactViewController.h */,
+				41588FDF167F017A007D9F75 /* TMSXeroContactViewController.m */,
+				41588FE0167F017B007D9F75 /* TMSXeroContactViewController.xib */,
 				41588FD2167DC535007D9F75 /* XeroParser.h */,
 				41588FD3167DC535007D9F75 /* XeroParser.m */,
 				41AA953F166EB34800700178 /* connect_xero_button_blue.png */,
@@ -396,6 +404,7 @@
 				41AA9553166F1F5000700178 /* TMSPersonViewController.xib in Resources */,
 				4181494E167B1871009F3A51 /* Readme.md in Resources */,
 				41801DAA167C5B0300A63E97 /* TMSXeroContactTableViewController.xib in Resources */,
+				41588FE2167F017B007D9F75 /* TMSXeroContactViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -437,6 +446,7 @@
 				41588FD7167EE5A5007D9F75 /* XeroOrganisation.m in Sources */,
 				41588FDA167EEAA5007D9F75 /* XeroAddress.m in Sources */,
 				41588FDD167EF282007D9F75 /* XeroResponse.m in Sources */,
+				41588FE1167F017B007D9F75 /* TMSXeroContactViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

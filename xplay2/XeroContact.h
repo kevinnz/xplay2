@@ -51,4 +51,6 @@
 @property (nonatomic, strong) NSString *accountsPayableTaxType;
 
 
+- (NSString *) getDefaultPhone;
+
 @end
