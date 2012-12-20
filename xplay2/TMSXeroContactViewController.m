@@ -49,5 +49,70 @@
 
 - (IBAction)saveToDevice:(id)sender {
     
+    ABAddressBookRef addressBook;
+    bool wantToSaveChanges = YES;
+    bool didSave;
+    CFErrorRef error = NULL;
+    
+    addressBook = ABAddressBookCreateWithOptions(NULL, &error);
+    
+    /* ... Work with the address book. ... */
+    
+    
+    ABRecordRef aRecord = ABPersonCreate();
+    CFErrorRef anError = NULL;
+    bool didSet;
+    
+    //CFStringRef fName, lName;
+    
+    if (contact.firstName) {
+        //CFStringRef cstrref=(__bridge CFStringRef)str;
+
+        
+        didSet = ABRecordSetValue(aRecord, kABPersonFirstNameProperty, (__bridge CFStringRef)contact.firstName, &anError);
+        if (!didSet) {/* Handle error here. */}
+    }
+    if (contact.firstName) {
+        didSet = ABRecordSetValue(aRecord, kABPersonLastNameProperty, (__bridge CFStringRef)contact.lastName , &anError);
+        if (!didSet) {/* Handle error here. */}
+    }
+    
+    if (contact.name) {
+        didSet = ABRecordSetValue(aRecord, kABPersonOrganizationProperty,
+                (__bridge CFStringRef)contact.name , &anError);
+        if (!didSet) {/* Handle error here. */}
+    }
+    /*
+    CFStringRef fName, lName;
+    fName = ABRecordCopyValue(aRecord, kABPersonFirstNameProperty);
+    lName  = ABRecordCopyValue(aRecord, kABPersonLastNameProperty);
+    */
+    /* ... Do something with firstName and lastName. ... */
+    
+    
+    
+    didSet = ABAddressBookAddRecord(addressBook, aRecord, &error);
+
+    
+    CFRelease(aRecord);
+    //CFRelease(fName);
+    //CFRelease(lName);
+      
+    
+    
+    if (ABAddressBookHasUnsavedChanges(addressBook)) {
+        if (wantToSaveChanges) {
+            didSave = ABAddressBookSave(addressBook, &error);
+            if (!didSave) {/* Handle error here. */}
+        } else {
+            ABAddressBookRevert(addressBook);
+        }
+    }
+    
+    
+    
+    
+    CFRelease(addressBook);
+    
 }
 @end

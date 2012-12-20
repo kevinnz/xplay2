@@ -82,6 +82,7 @@
     NSLog(@"company=%@", cname);
 
     self.firstName.text = [[NSString alloc] initWithFormat:@"%@ %@", name, lname];
+    self.OrgLabel.text = cname;
     
     phone = nil;
     ABMultiValueRef phoneNumbers = ABRecordCopyValue(person,

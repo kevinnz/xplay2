@@ -131,24 +131,6 @@
     <resources>
         <image name="connect_xero_button_blue.png" width="148" height="39"/>
     </resources>
-    <classes>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-        <class className="TMSViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/TMSViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="connectToXero:"/>
-                <relationship kind="action" name="findAPerson:"/>
-                <relationship kind="action" name="showOrg:"/>
-                <relationship kind="action" name="showXeroContacts:"/>
-                <relationship kind="outlet" name="connectToXero" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="findPersonButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="orgButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="welcomeLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
