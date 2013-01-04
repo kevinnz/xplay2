@@ -82,6 +82,34 @@
                 (__bridge CFStringRef)contact.name , &anError);
         if (!didSet) {/* Handle error here. */}
     }
+    
+    NSString *defaultPhone = [contact getDefaultPhone];
+    
+    if (defaultPhone) {
+        
+        ABMutableMultiValueRef multi =
+        ABMultiValueCreateMutable(kABMultiStringPropertyType);
+
+        ABMultiValueIdentifier multivalueIdentifier;
+        bool didAdd;
+        
+        // Here, multivalueIdentifier is just for illustration purposes; it isn't
+        // used later in the listing.  Real-world code can use this identifier to
+        // reference the newly-added value.
+        didAdd = ABMultiValueAddValueAndLabel(multi, (__bridge CFTypeRef)(defaultPhone) ,
+                                              kABPersonPhoneMainLabel, &multivalueIdentifier);
+        if (!didAdd) {/* Handle error here. */}
+        
+        
+        
+        //didAdd = ABMultiValueAddValueAndLabel(multi, @"(555) 555-2345", kABPersonPhoneMainLabel, &multivalueIdentifier);
+        //if (!didAdd) {/* Handle error here. */}
+
+        
+        didSet = ABRecordSetValue(aRecord, kABPersonPhoneProperty, multi, &anError);
+        if (!didSet) {/* Handle error here. */}
+        CFRelease(multi);
+    }
     /*
     CFStringRef fName, lName;
     fName = ABRecordCopyValue(aRecord, kABPersonFirstNameProperty);
