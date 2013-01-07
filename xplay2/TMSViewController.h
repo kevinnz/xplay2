@@ -13,7 +13,7 @@
 #import "XeroParser.h"
 
 
-@interface TMSViewController : UIViewController <AuthorizeWebViewControllerDelegate> {
+@interface TMSViewController : UIViewController <AuthorizeWebViewControllerDelegate,ABPeoplePickerNavigationControllerDelegate> {
     XeroParser *xeroParser;
 }
 

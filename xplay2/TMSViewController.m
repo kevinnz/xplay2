@@ -241,6 +241,36 @@
 }
 
 - (IBAction) showOrg:(id)sender {
+    
+    ABPeoplePickerNavigationController *picker = [[ABPeoplePickerNavigationController alloc] init];
+    picker.peoplePickerDelegate = self;
+    UITabBarItem *peoplePickerTabBarItem = [[UITabBarItem alloc] initWithTabBarSystemItem:UITabBarSystemItemContacts tag:0];
+    picker.tabBarItem = peoplePickerTabBarItem;
+    
+    TMSXeroContactTableViewController *viewController = [[TMSXeroContactTableViewController alloc] init];
+    
+    viewController.accessToken = accessToken;
+    viewController.consumer = consumer;
+    
+    /*
+    UITableViewController *tvc = [[UITableViewController alloc] initWithStyle:UITableViewStylePlain];
+    tvc.tableView.delegate = self;
+    tvc.tableView.dataSource = self;
+    */
+    UINavigationController *nvc = [[UINavigationController alloc] initWithRootViewController:viewController];
+    UIBarButtonItem *uibbiCancel = [[UIBarButtonItem alloc] initWithTitle:@"Cancel" style:UIBarButtonItemStylePlain target:self action:@selector(cancelTable)];
+    viewController.navigationItem.rightBarButtonItem = uibbiCancel;
+    viewController.title = @"Xero";
+    UITabBarItem *nvcTabBarItem = [[UITabBarItem alloc] initWithTabBarSystemItem:UITabBarSystemItemRecents tag:2];
+    nvc.tabBarItem = nvcTabBarItem;
+    UITabBarController *tbc = [[UITabBarController alloc] init];
+    NSArray *sections = [[NSArray alloc] initWithObjects:picker, nvc, nil];
+    [tbc setViewControllers:sections];
+    [self presentViewController:tbc animated:YES completion:Nil];
+    
+}
+
+- (void) getOrgAndShow {
     NSLog(@"show org");
     
     if (!accessToken) {
