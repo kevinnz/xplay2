@@ -231,8 +231,8 @@
 				41AA94B9166DD8D200700178 /* TMSViewController.m */,
 				41AA954F166F1F4E00700178 /* TMSPersonViewController.h */,
 				41AA9550166F1F4E00700178 /* TMSPersonViewController.m */,
-				4181494D167B1871009F3A51 /* Readme.md */,
 				41AA9551166F1F5000700178 /* TMSPersonViewController.xib */,
+				4181494D167B1871009F3A51 /* Readme.md */,
 				41AA94A4166DD8D200700178 /* Supporting Files */,
 			);
 			path = xplay2;
