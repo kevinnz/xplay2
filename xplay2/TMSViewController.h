@@ -18,10 +18,12 @@
 }
 
 @property (weak, nonatomic) IBOutlet UIButton *findPersonButton;
+@property (weak, nonatomic) IBOutlet UIButton *xeroContactButton;
 
 @property (weak, nonatomic) IBOutlet UIButton *orgButton;
 @property (weak, nonatomic) IBOutlet UIButton *connectToXero;
 @property (weak, nonatomic) IBOutlet UILabel *welcomeLabel;
+@property (weak, nonatomic) IBOutlet UILabel *instructionLabel;
 
 @property (nonatomic, strong) XeroParser *xeroParser;
 

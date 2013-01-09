@@ -33,7 +33,7 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yJB-XN-40X">
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="51" id="hS3-B9-Xkd"/>
+                                    <constraint firstAttribute="width" constant="145" id="YCh-FR-msE"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" size="button"/>
                                 <state key="normal" title="Org">
@@ -101,6 +101,9 @@
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="You must connect to Xero to authorise access to your account." lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="a1p-0a-TVa">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="61" id="9Wi-ef-3bV"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -108,28 +111,29 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="yJB-XN-40X" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="65" id="0Us-cn-8jl"/>
-                            <constraint firstItem="nhh-Lv-uRS" firstAttribute="top" secondItem="3" secondAttribute="top" constant="89" id="1Lf-PD-gB3"/>
+                            <constraint firstAttribute="bottom" secondItem="uWn-fV-Llc" secondAttribute="bottom" constant="98" id="3do-Ju-Tb7"/>
                             <constraint firstAttribute="trailing" secondItem="E3e-vp-JBr" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="3rt-wd-v25"/>
-                            <constraint firstItem="yJB-XN-40X" firstAttribute="top" secondItem="3" secondAttribute="top" constant="180" id="5eA-sa-Ias"/>
                             <constraint firstItem="baE-aW-Iog" firstAttribute="leading" secondItem="nhh-Lv-uRS" secondAttribute="leading" type="default" id="89E-BS-J2d"/>
                             <constraint firstItem="uWn-fV-Llc" firstAttribute="baseline" secondItem="E3e-vp-JBr" secondAttribute="baseline" type="default" id="CNo-3D-Zcv"/>
                             <constraint firstItem="a1p-0a-TVa" firstAttribute="top" secondItem="3" secondAttribute="top" constant="20" symbolic="YES" type="default" id="GOr-qt-DHO"/>
                             <constraint firstItem="a1p-0a-TVa" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="QkT-IV-R44"/>
+                            <constraint firstItem="yJB-XN-40X" firstAttribute="top" secondItem="baE-aW-Iog" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="VGH-DW-iaT"/>
                             <constraint firstItem="baE-aW-Iog" firstAttribute="leading" secondItem="uWn-fV-Llc" secondAttribute="leading" type="default" id="W6f-9v-FXJ"/>
                             <constraint firstItem="baE-aW-Iog" firstAttribute="top" secondItem="nhh-Lv-uRS" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="cOM-RG-DlJ"/>
                             <constraint firstAttribute="trailing" secondItem="a1p-0a-TVa" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="cwY-X4-zlo"/>
                             <constraint firstItem="nhh-Lv-uRS" firstAttribute="top" secondItem="a1p-0a-TVa" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="ecw-1R-Y6C"/>
                             <constraint firstItem="nhh-Lv-uRS" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="13" id="tgg-fA-d7h"/>
-                            <constraint firstItem="uWn-fV-Llc" firstAttribute="top" secondItem="yJB-XN-40X" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="xDp-5R-Fze"/>
+                            <constraint firstItem="yJB-XN-40X" firstAttribute="centerX" secondItem="nhh-Lv-uRS" secondAttribute="centerX" type="default" id="tur-7T-xhG"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Xero Buddy" id="atV-gn-gN0"/>
                     <connections>
                         <outlet property="connectToXero" destination="nhh-Lv-uRS" id="aaB-4N-6m9"/>
                         <outlet property="findPersonButton" destination="uWn-fV-Llc" id="omC-GX-csE"/>
+                        <outlet property="instructionLabel" destination="a1p-0a-TVa" id="sQz-6N-5JH"/>
                         <outlet property="orgButton" destination="yJB-XN-40X" id="IiQ-D6-06C"/>
                         <outlet property="welcomeLabel" destination="baE-aW-Iog" id="sie-Nc-9zE"/>
+                        <outlet property="xeroContactButton" destination="E3e-vp-JBr" id="Mrq-Ul-Jfs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>

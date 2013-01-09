@@ -30,7 +30,10 @@
 
 @implementation TMSViewController
 @synthesize welcomeLabel;
+@synthesize instructionLabel;
 @synthesize xeroParser;
+@synthesize xeroContactButton;
+
 
 - (void)viewDidLoad
 {
@@ -38,7 +41,12 @@
 	// Do any additional setup after loading the view, typically from a nib.
     
     self.welcomeLabel.text = @"";
-    
+    if (!accessToken) {
+        self.orgButton.hidden = YES;
+        self.findPersonButton.hidden = YES;
+        self.xeroContactButton.hidden = YES;
+        
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -52,6 +60,7 @@
 {
     [self getToken];
 }
+
 - (void) getToken {
     if (!consumer) {
         consumer = [[OAConsumer alloc] initWithKey:CONSUMER_KEY
@@ -105,10 +114,12 @@
         vc = [[AuthorizeWebViewController alloc] initWithNibName:@"AuthorizeWebViewController" bundle:nil];
         vc.delegate = self;
         
-        [self presentViewController: vc animated:YES completion:nil];
-        //[self presentViewController:pNewController animated:YES completion:nil];
-        [vc.webView loadRequest:request];
         
+        [self presentViewController: vc animated:YES completion:^() {
+            NSLog(@"completed web view load");
+        }];
+       
+        [vc.webView loadRequest:request];
 
     }
 }
@@ -189,7 +200,12 @@
         //[self.accessToken storeInUserDefaultsWithServiceProviderName:kAppProviderName
         //                                                      prefix:kAppPrefix];
         
+        //[self showOrg:Nil];
         
+        self.xeroContactButton.hidden = NO;
+        self.findPersonButton.hidden = NO;
+        self.instructionLabel.hidden = YES;
+        self.connectToXero.hidden = YES;
         
     }
 }
@@ -252,12 +268,14 @@
     viewController.accessToken = accessToken;
     viewController.consumer = consumer;
     
-    /*
-    UITableViewController *tvc = [[UITableViewController alloc] initWithStyle:UITableViewStylePlain];
-    tvc.tableView.delegate = self;
-    tvc.tableView.dataSource = self;
-    */
+
+    
     UINavigationController *nvc = [[UINavigationController alloc] initWithRootViewController:viewController];
+    
+    
+   // UINavigationController *nvc = self.navigationController;
+    
+    
     UIBarButtonItem *uibbiCancel = [[UIBarButtonItem alloc] initWithTitle:@"Cancel" style:UIBarButtonItemStylePlain target:self action:@selector(cancelTable)];
     viewController.navigationItem.rightBarButtonItem = uibbiCancel;
     viewController.title = @"Xero";
@@ -362,6 +380,60 @@
 - (void)apiOrg:(OAServiceTicket *)ticket didFailWithError:(NSError *)error {
     NSLog(@"%@", error);
 }
+
+
+#pragma mark ABPeoplePickerNavigationControllerDelegate methods
+// Displays the information of a selected person
+- (BOOL)peoplePickerNavigationController:(ABPeoplePickerNavigationController *)peoplePicker shouldContinueAfterSelectingPerson:(ABRecordRef)person
+{
+    
+    NSLog(@"person=%@", person);
+    
+    //[self showPerson:person];
+    
+    
+    TMSPersonViewController *personViewController = [[TMSPersonViewController alloc] init];
+    
+    personViewController.myPerson = &person;
+    personViewController.accessToken = accessToken;
+    personViewController.consumer = consumer;
+    
+    [self.navigationController pushViewController:personViewController animated:YES];
+
+    
+    
+    
+    
+    
+	return NO;
+}
+
+
+// Does not allow users to perform default actions such as dialing a phone number, when they select a person property.
+- (BOOL)peoplePickerNavigationController:(ABPeoplePickerNavigationController *)peoplePicker shouldContinueAfterSelectingPerson:(ABRecordRef)person
+								property:(ABPropertyID)property identifier:(ABMultiValueIdentifier)identifier
+{
+	return NO;
+}
+
+
+// Dismisses the people picker and shows the application when users tap Cancel.
+- (void)peoplePickerNavigationControllerDidCancel:(ABPeoplePickerNavigationController *)peoplePicker;
+{
+	[self dismissViewControllerAnimated:YES completion:nil];
+    
+    
+}
+
+
+#pragma mark ABPersonViewControllerDelegate methods
+// Does not allow users to perform default actions such as dialing a phone number, when they select a contact property.
+- (BOOL)personViewController:(ABPersonViewController *)personViewController shouldPerformDefaultActionForPerson:(ABRecordRef)person
+					property:(ABPropertyID)property identifier:(ABMultiValueIdentifier)identifierForValue
+{
+	return NO;
+}
+
 
 
 
